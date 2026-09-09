@@ -1,0 +1,92 @@
+/* ============================================================
+   设计 Token —— 全站变量
+   配色克制、深蓝 + 金 + 米；不引入渐变 / 高饱和
+   ============================================================ */
+:root {
+  /* —— 颜色 —— */
+  --primary: #1F3A68;          /* 深蓝 */
+  --primary-soft: #2A4D85;
+  --primary-deep: #11254A;
+  --accent: #C0954E;            /* 金 */
+  --accent-soft: #D9B97A;
+  --accent-deep: #8E6D32;
+  --ink: #1A1A1A;               /* 正文 */
+  --ink-soft: #2C2C2C;
+  --muted: #6B6B6B;             /* 副文 */
+  --muted-soft: #9A9A9A;
+  --line: #E4DCC9;              /* 浅金分割线 */
+  --line-soft: #EFE9DA;
+  --surface: #F5F1E8;           /* 米色背景 */
+  --surface-deep: #EDE6D4;
+  --card: #FFFFFF;
+  --white: #FFFFFF;
+  --danger: #B32D2D;
+  --success: #2E7D32;
+
+  /* —— 字体 —— */
+  --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "STSong", serif;
+  --font-sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+
+  /* —— 字号 —— */
+  --fs-12: 0.75rem;     /* 12px */
+  --fs-14: 0.875rem;    /* 14px */
+  --fs-16: 1rem;        /* 16px */
+  --fs-18: 1.125rem;    /* 18px */
+  --fs-22: 1.375rem;    /* 22px */
+  --fs-28: 1.75rem;     /* 28px */
+  --fs-36: 2.25rem;     /* 36px */
+  --fs-48: 3rem;        /* 48px */
+  --fs-64: 4rem;        /* 64px */
+  --fs-80: 5rem;        /* 80px */
+
+  /* —— 行高 —— */
+  --lh-tight: 1.15;
+  --lh-snug: 1.35;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.8;
+
+  /* —— 间距（8 倍数）—— */
+  --sp-1: 0.25rem;     /* 4 */
+  --sp-2: 0.5rem;      /* 8 */
+  --sp-3: 0.75rem;     /* 12 */
+  --sp-4: 1rem;        /* 16 */
+  --sp-5: 1.5rem;      /* 24 */
+  --sp-6: 2rem;        /* 32 */
+  --sp-7: 2.5rem;      /* 40 */
+  --sp-8: 3rem;        /* 48 */
+  --sp-10: 4rem;       /* 64 */
+  --sp-12: 5rem;       /* 80 */
+  --sp-16: 7rem;       /* 112 */
+  --sp-20: 9rem;       /* 144 */
+
+  /* —— 容器 —— */
+  --container: 1200px;
+  --container-narrow: 880px;
+  --container-wide: 1400px;
+
+  /* —— 半径 —— */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 16px;
+  --r-full: 9999px;
+
+  /* —— 过渡 —— */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --t-fast: 160ms var(--ease);
+  --t-base: 280ms var(--ease);
+  --t-slow: 480ms var(--ease);
+
+  /* —— 阴影（克制使用）—— */
+  --shadow-sm: 0 1px 2px rgba(17, 37, 74, 0.04), 0 2px 6px rgba(17, 37, 74, 0.05);
+  --shadow-md: 0 4px 12px rgba(17, 37, 74, 0.06), 0 2px 4px rgba(17, 37, 74, 0.04);
+  --shadow-lg: 0 16px 40px rgba(17, 37, 74, 0.08), 0 4px 8px rgba(17, 37, 74, 0.04);
+
+  /* —— 层级 —— */
+  --z-nav: 100;
+  --z-modal: 200;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
