@@ -232,41 +232,48 @@
 @media (max-width: 820px) {
   .nav__menu {
     position: fixed;
-    top: 64px;
+    top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    width: 280px;
+    width: 100%;
     background: var(--surface);
     flex-direction: column;
     align-items: flex-start;
-    padding: var(--sp-7);
-    gap: var(--sp-5);
+    padding: 80px var(--sp-7) var(--sp-7);
+    gap: var(--sp-2);
     transform: translateX(100%);
     transition: transform var(--t-base);
-    border-left: 1px solid var(--line);
-    box-shadow: -12px 0 32px rgba(0, 0, 0, 0.18);
+    border-left: none;
+    box-shadow: none;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .nav__menu.is-open { transform: translateX(0); }
   .nav__link {
-    font-size: var(--fs-16);
+    display: block;
+    width: 100%;
+    font-size: var(--fs-18);
     color: var(--ink);
+    padding: var(--sp-4) 0;
+    border-bottom: 1px solid var(--line-soft);
   }
-  .nav__toggle { display: flex; }
+  .nav__link--active::after { display: none; }
+  .nav__cta {
+    display: block;
+    width: 100%;
+    margin: var(--sp-5) 0 0;
+    padding: var(--sp-4) var(--sp-5);
+    text-align: center;
+  }
+  .nav__toggle {
+    display: flex;
+    z-index: 101;
+    position: relative;
+  }
 
-  /* 全屏遮罩：解决左半屏透明、看不清的问题 */
-  .nav-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity var(--t-base), visibility var(--t-base);
-    z-index: calc(var(--z-nav) - 1);
-  }
-  .nav-backdrop.is-open {
-    opacity: 1;
-    visibility: visible;
-  }
+  /* 全屏菜单已覆盖整屏，不再需要额外遮罩 */
+  .nav-backdrop { display: none; }
 }
 
 /* —— 表单 —— */
