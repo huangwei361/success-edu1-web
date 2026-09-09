@@ -1,0 +1,28 @@
+# 操作系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 本地预览与测试
+*.log
+npm-debug.log*
+.DS_Store
+.env
+.env.local
+
+# 部署目录（如未来加）
+.vercel/
+.netlify/
+node_modules/
+
+# 大型二进制（如未来加）
+*.psd
+*.sketch
+*.fig
