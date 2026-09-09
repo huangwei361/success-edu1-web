@@ -237,7 +237,7 @@
     right: 0;
     bottom: 0;
     width: 100%;
-    background: var(--surface);
+    background: var(--primary-deep);
     flex-direction: column;
     align-items: flex-start;
     padding: 80px var(--sp-7) var(--sp-7);
@@ -254,10 +254,12 @@
     display: block;
     width: 100%;
     font-size: var(--fs-18);
-    color: var(--ink);
+    color: var(--surface);
     padding: var(--sp-4) 0;
-    border-bottom: 1px solid var(--line-soft);
+    border-bottom: 1px solid rgba(245, 241, 232, 0.12);
   }
+  .nav__link:hover { color: var(--accent); }
+  .nav__link--active { color: var(--accent); }
   .nav__link--active::after { display: none; }
   .nav__cta {
     display: block;
@@ -265,12 +267,17 @@
     margin: var(--sp-5) 0 0;
     padding: var(--sp-4) var(--sp-5);
     text-align: center;
+    background: var(--accent);
+    color: var(--primary-deep);
+    border-color: var(--accent);
   }
   .nav__toggle {
     display: flex;
     z-index: 101;
     position: relative;
   }
+  /* 深色抽屉之上，汉堡按钮 span 必须是浅色才看得清 */
+  .nav__toggle span { background: var(--surface); }
 
   /* 全屏菜单已覆盖整屏，不再需要额外遮罩 */
   .nav-backdrop { display: none; }
