@@ -10,12 +10,17 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="assets/css/reset.css">
-<link rel="stylesheet" href="assets/css/tokens.css">
-<link rel="stylesheet" href="assets/css/layout.css">
-<link rel="stylesheet" href="assets/css/components.css">
-<link rel="stylesheet" href="assets/css/pages.css">
-<link rel="stylesheet" href="assets/css/page-methodology.css">
+<link rel="stylesheet" href="assets/css/reset.css?v=202609091749">
+<link rel="stylesheet" href="assets/css/tokens.css?v=202609091749">
+<link rel="stylesheet" href="assets/css/layout.css?v=202609091749">
+<link rel="stylesheet" href="assets/css/components.css?v=202609091749">
+<link rel="stylesheet" href="assets/css/pages.css?v=202609091749">
+<link rel="stylesheet" href="assets/css/page-methodology.css?v=202609091749">
+
+  <!-- cache-busting: 解决微信内置浏览器强制缓存 -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
 </head>
 <body>
 
@@ -277,7 +282,7 @@
 
 <div id="footerMount"></div>
 
-<script src="assets/js/partials.js" data-active="methodology"></script>
-<script src="assets/js/main.js" defer></script>
+<script src="assets/js/partials.js?v=202609091749" data-active="methodology"></script>
+<script src="assets/js/main.js?v=202609091749" defer></script>
 </body>
 </html>
