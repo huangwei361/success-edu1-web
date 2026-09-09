@@ -1,0 +1,127 @@
+/* 法务页 / 退课规则 */
+.legal-hero {
+  padding: var(--sp-12) 0 var(--sp-7);
+  background:
+    radial-gradient(ellipse at top right, rgba(31, 58, 104, 0.06), transparent 50%),
+    var(--surface);
+}
+.legal-meta {
+  display: flex;
+  gap: var(--sp-2);
+  font-size: var(--fs-12);
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-top: var(--sp-5);
+}
+
+.refund-table {
+  margin-top: var(--sp-7);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-md);
+  background: var(--card);
+  overflow: hidden;
+}
+.refund-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.5fr;
+  gap: var(--sp-4);
+  padding: var(--sp-5) var(--sp-6);
+  border-bottom: 1px solid var(--line-soft);
+  align-items: center;
+  font-size: var(--fs-14);
+}
+.refund-row:last-child { border-bottom: 0; }
+.refund-row--head {
+  background: var(--surface);
+  font-size: var(--fs-12);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+.refund-row__percent {
+  font-family: var(--font-serif);
+  font-size: var(--fs-22);
+  font-weight: 600;
+  color: var(--primary);
+}
+.refund-row--best { background: rgba(46, 125, 50, 0.06); }
+.refund-row--best .refund-row__percent { color: var(--success); }
+.refund-row--none { background: rgba(179, 45, 45, 0.04); }
+.refund-row--none .refund-row__percent { color: var(--danger); }
+
+@media (max-width: 700px) {
+  .refund-row {
+    grid-template-columns: 1fr 80px;
+    gap: var(--sp-2);
+    padding: var(--sp-4) var(--sp-5);
+  }
+  .refund-row > div:last-child { grid-column: 1 / -1; font-size: var(--fs-12); color: var(--muted); margin-top: var(--sp-2); }
+  .refund-row--head > div:last-child,
+  .refund-row--head > div:nth-child(2) { display: none; }
+}
+
+.legal-steps {
+  list-style: none;
+  margin: var(--sp-7) 0 0;
+  padding: 0;
+  counter-reset: step;
+  display: grid;
+  gap: var(--sp-3);
+}
+.legal-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: var(--sp-4);
+  padding: var(--sp-5) var(--sp-6);
+  background: var(--card);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-md);
+  align-items: center;
+}
+.legal-step__num {
+  width: 48px;
+  height: 48px;
+  background: var(--accent);
+  color: var(--primary-deep);
+  border-radius: var(--r-full);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-serif);
+  font-size: var(--fs-22);
+  font-weight: 700;
+}
+.legal-step__title {
+  font-family: var(--font-serif);
+  font-size: var(--fs-18);
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: var(--sp-1);
+}
+.legal-step__desc {
+  color: var(--muted);
+  font-size: var(--fs-14);
+  line-height: var(--lh-relaxed);
+}
+.legal-step__desc strong { color: var(--primary); }
+
+.legal-block {
+  padding: var(--sp-7);
+  background: var(--card);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-md);
+  margin-top: var(--sp-7);
+}
+.legal-block p {
+  color: var(--ink-soft);
+  line-height: var(--lh-relaxed);
+}
+
+.legal-cta {
+  margin-top: var(--sp-10);
+  padding: var(--sp-8);
+  background: var(--surface-deep);
+  border: 1px solid var(--accent);
+  border-radius: var(--r-md);
+  text-align: center;
+}
