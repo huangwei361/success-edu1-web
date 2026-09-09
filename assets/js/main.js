@@ -7,17 +7,28 @@
   // —— 移动菜单切换 ——
   const toggle = document.getElementById('navToggle');
   const menu = document.getElementById('navMenu');
+  const backdrop = document.getElementById('navBackdrop');
   if (toggle && menu) {
+    const close = () => {
+      menu.classList.remove('is-open');
+      if (backdrop) backdrop.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
+    const open = () => {
+      menu.classList.add('is-open');
+      if (backdrop) backdrop.classList.add('is-open');
+      toggle.setAttribute('aria-expanded', 'true');
+    };
     toggle.addEventListener('click', () => {
-      const open = menu.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(open));
+      if (menu.classList.contains('is-open')) close();
+      else open();
     });
+    if (backdrop) {
+      backdrop.addEventListener('click', close);
+    }
     // 点菜单项后关闭（移动端）
     menu.querySelectorAll('a').forEach((a) => {
-      a.addEventListener('click', () => {
-        menu.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
+      a.addEventListener('click', close);
     });
   }
 

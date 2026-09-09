@@ -244,10 +244,29 @@
     transform: translateX(100%);
     transition: transform var(--t-base);
     border-left: 1px solid var(--line);
+    box-shadow: -12px 0 32px rgba(0, 0, 0, 0.18);
   }
   .nav__menu.is-open { transform: translateX(0); }
-  .nav__link { font-size: var(--fs-16); }
+  .nav__link {
+    font-size: var(--fs-16);
+    color: var(--ink);
+  }
   .nav__toggle { display: flex; }
+
+  /* 全屏遮罩：解决左半屏透明、看不清的问题 */
+  .nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--t-base), visibility var(--t-base);
+    z-index: calc(var(--z-nav) - 1);
+  }
+  .nav-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 /* —— 表单 —— */

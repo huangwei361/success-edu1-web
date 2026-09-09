@@ -25,7 +25,10 @@
   var base = getBase();
   var active = (document.currentScript && document.currentScript.dataset.active) || '';
 
+  var BACKDROP = '<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>';
+
   var NAV = ''
+    + BACKDROP
     + '<nav class="nav" aria-label="主导航">'
     + '  <div class="container nav__inner">'
     + '    <a href="' + base + '" class="nav__brand" aria-label="返回首页">'
